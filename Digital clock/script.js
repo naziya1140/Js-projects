@@ -8,3 +8,5 @@ setInterval(function(){
     let date= new Date();
     clock.innerHTML= date.toLocaleTimeString();
 }, 1000);
+
+//set interval is repeatedly executing the code after 1sec(1000ms)

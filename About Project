@@ -2,3 +2,7 @@ P1: The color changing project changes the color of the entire body when the box
 
 P2: The BMI calculator project calculated the BMI when a person gives input of his/her height and weight.
 
+P3
+
+p4:Guess the number: you have 10 attempts to guess a number,an array will be generated of the numbers you have selected.
+you have to show the number of guesses left, when you click the guess number will decrease by one.
