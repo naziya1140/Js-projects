@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #212121;
+    color:white;
+}
+
+nav{
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+}
+
+li{
+    width: 45em;
+    display: inline-block;
+    text-align: center;
+    background-color: #212121;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgb(54, 53, 53);
+    margin:5px;
+    padding: 3px;
+}
+
+li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; /* Full height of the viewport */
+}
+
+.innercontainer{
+    text-align: center;
+    background-color: black;
+    width: 30vw;
+    height: 60vh;
+    border-radius: 5px;
+}
+
+input{
+    margin: 10px;
+    padding: 10px;
+    display: inline;
+}
+
+button{
+    height: 30px;
+    width: 200px;
+    margin: 20px;
+    background-color: #212111;
+    color: white;
+}
+
+h2{
+    margin: 20px;
+}
+
+h1{
+    margin: 20px;
+}
+
+.aboutBMI{
+    margin: 20px;
+}
