@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        *{
+            color:white;
+        }
+        body{
+            background-color: #212121;
+            text-align: center;
+        }
+        button{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Select start to see the list of color</h1>
+    <h1>And select stop to fix the color</h1>
+    <h2></h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+    <script>
+        //generate a random color
+        const randomColor=function(){
+            const hex="0123456789ABCDEF";//hex value
+            let color="#";
+            for(let i=0; i<6; i++){
+                //multiplying with 16 gives 0 to 15th value.
+                let temp= Math.ceil(Math.random()*16);
+                color+=hex[temp];
+            }
+            return color;
+            //funtion to return a random color(with 6 digits)
+        };
+
+        const changeColor= function(){
+            document.querySelector('body').style.backgroundColor=randomColor();
+        }
+        
+        let starting;
+        document.getElementById('start').addEventListener('click', function(){
+            //good practices.==> if it is null, then only start the interval again.
+            if(starting==null){
+            starting= setInterval(changeColor, 1000);
+            }
+            document.querySelector('h2').innerHTML= "";
+        })
+
+        document.getElementById('stop').addEventListener('click', function(){
+            clearInterval(starting);
+            starting=null;//optimized code by flushing the memory.
+            document.querySelector('h2').innerHTML= "This color is fixed";
+        });
+
+    </script>
+
+</body>
+</html>
